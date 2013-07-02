@@ -86,9 +86,8 @@ function getCookie(CookieName) {
 }
 
 function setCookie(c_name,value,expiredays, path, domain){
-	var exdate=new Date();
-	exdate.setDate(exdate.getDate()+expiredays);
-	document.cookie=encodeURIComponent(c_name)+ "=" +encodeURIComponent(value)+
-	((expiredays==null) ? ";" : "; expires="+exdate.toGMTString())+
-	'path=' + path + "; " + 'domain:'+domain ;
+	document.cookie = encodeURIComponent(c_name) + "=" +
+		encodeURIComponent(value) +
+		((expiresec==null) ? "; " : "; max-age="+ expiresec ) +
+		'path=' + path + "; " + 'domain='+domain;
 }
