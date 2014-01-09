@@ -91,3 +91,11 @@ function setCookie(c_name,value,expiredays, path, domain){
 		((expiresec==null) ? "; " : "; max-age="+ expiresec ) +
 		'path=' + path + "; " + 'domain='+domain;
 }
+
+//删除cookie    
+function delCookie(name){
+	var exp = new Date();    
+	exp.setTime(exp.getTime() - 1);    
+	var cval=getCookie(name);    
+	if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+}
