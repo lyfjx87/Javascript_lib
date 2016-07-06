@@ -36,4 +36,4 @@
     };
 
     return location;
-})(window.location);
+})(location);
