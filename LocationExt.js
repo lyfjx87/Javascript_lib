@@ -22,7 +22,7 @@
     location.queryString = function(){
         var tmp = new Array();
         for (var k in this.query) {
-            var v = this.query;
+            var v = this.query[k];
             if (v === '' || v === undefined || v === null) {
                 continue;
             }
